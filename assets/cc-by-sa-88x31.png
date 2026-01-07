@@ -1,1 +1,6 @@
-PLACEHOLDER IMAGE: Creative Commons BY-SA logo (88x31) - replace with official image file
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder CC BY-SA badge (SVG content saved with .png extension as a placeholder). Replace with a raster PNG if needed. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31">
+  <rect width="88" height="31" rx="4" fill="#ffffff" stroke="#e1e4e8"/>
+  <text x="8" y="20" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#333">CC BY-SA</text>
+</svg>

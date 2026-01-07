@@ -1,1 +1,7 @@
-PLACEHOLDER IMAGE: ScivizLab Vienna logo (120x40) - replace with official image file
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder ScivizLab Vienna logo (SVG content saved with .png extension as a placeholder). Replace with a raster PNG if needed. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <rect width="120" height="40" rx="6" fill="#0b74de" />
+  <circle cx="28" cy="20" r="12" fill="#fff" opacity="0.92" />
+  <text x="52" y="24" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="600">ScivizLab Vienna</text>
+</svg>

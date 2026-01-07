@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Handsome Tello - ScivizLab Vienna">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#1e3c72"/>
+      <stop offset="100%" stop-color="#2a5298"/>
+    </linearGradient>
+    <filter id="f" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="24" result="b"/>
+      <feBlend in="SourceGraphic" in2="b"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" fill="url(#g)" />
+  <!-- soft shapes -->
+  <g opacity="0.12" filter="url(#f)">
+    <circle cx="220" cy="120" r="140" fill="#ff7a7a" />
+    <circle cx="520" cy="240" r="180" fill="#ffd26f" />
+    <circle cx="940" cy="100" r="120" fill="#7ee7c0" />
+  </g>
+  <!-- main content -->
+  <g transform="translate(64,48)">
+    <text x="0" y="72" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="64" fill="#ffffff" font-weight="700">Handsome Tello</text>
+    <text x="0" y="120" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="20" fill="#e6f0ff">ScivizLab Vienna — visualization tooling and demos</text>
+  </g>
+  <!-- decorative drone silhouette (stylized) -->
+  <g transform="translate(820,120) scale(0.9)">
+    <rect x="0" y="0" width="320" height="160" rx="24" ry="24" fill="#ffffff" opacity="0.06"/>
+    <path d="M40 80 L62 64 L84 80 L106 64 L128 80 L150 64 L172 80" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+    <circle cx="24" cy="80" r="18" fill="#ffffff" opacity="0.9"/>
+    <circle cx="196" cy="80" r="18" fill="#ffffff" opacity="0.9"/>
+    <rect x="68" y="94" width="84" height="20" rx="8" fill="#ffffff" opacity="0.9"/>
+  </g>
+  <!-- footer credit -->
+  <text x="64" y="340" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#cfe3ff">© ScivizLab Vienna</text>
+</svg>
