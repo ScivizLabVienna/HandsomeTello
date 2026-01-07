@@ -46,13 +46,12 @@ HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone: r
 
 ---
 
-## Features & roadmap
+## Features
 Planned and implemented project areas:
 - Linux userspace on UZ801 expansion modules
 - Modular payload support (camera, environmental sensors)
 - Photogrammetry capture examples and pipelines
-- Bridge/adapter patterns for MAVLink integration (planned)
-- Security hardening and isolation best-practices (planned)
+- Bridge/adapter patterns for MAVLink integration
 
 Want a prioritized roadmap? Open an issue labeled `roadmap` or `help wanted` and we’ll triage.
 
