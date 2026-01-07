@@ -13,7 +13,7 @@ This drone was developed as part of the ongoing research project KanalOpal for t
 
 # HandsomeTello — The open micro drone
 
-HandsomeTello turns the DJI Tello into an open, hackable micro drone: run lightweight Linux userspace, attach research payloads, and prototype workflows for photogrammetry, environmental sensing, and robotics research.
+HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone: run lightweight Linux userspace, attach research payloads, and prototype workflows for photogrammetry, environmental sensing, and robotics research.
 
 ---
 
@@ -34,7 +34,7 @@ HandsomeTello turns the DJI Tello into an open, hackable micro drone: run lightw
 ---
 
 ## Quick highlights
-- Target hardware: Tello / UZ801-derived WiFi SoC modding  
+- Target hardware: Tello / UZ801-derived WiFi dongle
 - Goals: Linux userspace support, modular payloads, photogrammetry-ready toolchain  
 - Keywords: OpenStick, UZ801, Tello, photogrammetry, modular-drone, embedded-linux, microdrone
 
@@ -42,7 +42,7 @@ HandsomeTello turns the DJI Tello into an open, hackable micro drone: run lightw
 - Cheap, mass-produced, and accessible — low cost enables iterative experimentation and larger-scale testing.  
 - Open, documented command/telemetry API — simplifies scripting and automation.  
 - Established community research and projects to build on — faster reproducibility.  
-- Often classified as a toy drone — fewer regulatory barriers in many jurisdictions (verify local rules before testing).
+- Classified as a toy drone — fewer regulatory barriers in many jurisdictions (verify local rules before testing).
 
 ---
 
