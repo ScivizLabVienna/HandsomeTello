@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero-banner-1200x360.svg" alt="HandsomeTello — The open micro drone" width="100%" style="max-width:1200px;border-radius:8px;" />
+  <img src="assets/hero-banner-1200x360.jpeg" alt="HandsomeTello — The open micro drone" width="100%" style="max-width:1200px;border-radius:8px;" />
 </p>
 
 This drone was developed as part of the ongoing research project KanalOpal for the Science Visualization Lab Vienna, University of Applied Arts.
