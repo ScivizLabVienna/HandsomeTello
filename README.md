@@ -2,7 +2,7 @@
   <img src="assets/hero-banner-1200x360.jpg" alt="HandsomeTello — The open micro drone" width="100%" style="max-width:600px;border-radius:8px;" />
 </p>
 
-This drone was developed as part of the ongoing research project KanalOpal for the Science Visualization Lab Vienna, University of Applied Arts.
+This drone was developed as part of the ongoing research project [KanalOpal](https://www.scivizlab.com/kanal-opal) for the Science Visualization Lab Vienna, University of Applied Arts.
 
 [![Release](https://img.shields.io/github/v/release/ScivizLabVienna/HandsomeTello?label=release&color=brightgreen)](https://github.com/ScivizLabVienna/HandsomeTello/releases)
 [![Docs license](https://img.shields.io/badge/docs-CC%20BY--SA%204.0-lightgrey)](LICENSE)
