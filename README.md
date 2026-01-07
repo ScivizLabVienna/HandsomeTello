@@ -1,4 +1,4 @@
-This drone was developed as part of the ongoing research project KanalOpal for the Science Visualization Lab Vienna, University of Applied Arts Vienna.
+This drone was developed as part of the ongoing research project KanalOpal for the Science Visualization Lab Vienna, University of Applied Arts.
 
 [![Release](https://img.shields.io/github/v/release/ScivizLabVienna/HandsomeTello?label=release&color=brightgreen)](https://github.com/ScivizLabVienna/HandsomeTello/releases)
 [![Docs license](https://img.shields.io/badge/docs-CC%20BY--SA%204.0-lightgrey)](LICENSE)
