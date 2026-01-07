@@ -85,9 +85,9 @@ Both are third-party projects — check their repos and licenses before use.
 ## Quickstart
 1. Clone the repo:
    git clone https://github.com/ScivizLabVienna/HandsomeTello.git
-2. Read docs/installation.md for recommended hardware and the test bench setup.
-3. Prepare an isolated test environment (bench power, USB‑serial, isolated Wi‑Fi).
-4. Consult CREDITS.md and upstream OpenStick docs before flashing or reimaging.
+2. Follow the instructions on  [https://wvthoog.nl/openstick/](https://wvthoog.nl/openstick/)
+3. Follow the instructions on [https://instructables.com](https://www.instructables.com/HandsomeTello/)
+4. Fly
 
 Commands
 ```bash
