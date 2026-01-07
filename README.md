@@ -1,140 +1,154 @@
+[![Release](https://img.shields.io/github/v/release/ScivizLabVienna/HandsomeTello?label=release&color=brightgreen)](https://github.com/ScivizLabVienna/HandsomeTello/releases)
+[![Docs license](https://img.shields.io/badge/docs-CC%20BY--SA%204.0-lightgrey)](LICENSE)
+[![Code license](https://img.shields.io/badge/code-MIT-green)](LICENSE.code)
+[![Issues](https://img.shields.io/github/issues/ScivizLabVienna/HandsomeTello)](https://github.com/ScivizLabVienna/HandsomeTello/issues)
+[![Contributors](https://img.shields.io/github/contributors/ScivizLabVienna/HandsomeTello)](https://github.com/ScivizLabVienna/HandsomeTello/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/ScivizLabVienna/HandsomeTello?style=social)](https://github.com/ScivizLabVienna/HandsomeTello/stargazers)
+
 # HandsomeTello — The open micro drone
 
-HandsomeTello turns the DJI Tello into an open, hackable micro drone: run lightweight Linux userspace, attach research payloads, and prototype autonomous behaviors for photogrammetry, environmental sensing, and robotics research.
+HandsomeTello turns the DJI Tello into an open, hackable micro drone: run lightweight Linux userspace, attach research payloads, and prototype workflows for photogrammetry, environmental sensing, and robotics research.
+
+---
+
+## Table of contents
+- [Quick highlights](#quick-highlights)
+- [Why Ryze Tello](#why-ryze-tello)
+- [Features & roadmap](#features--roadmap)
+- [Deferred / Not-included features](#deferred--not-included-features)
+- [Recommended remote control software (4G)](#recommended-remote-control-software-4g)
+- [Quickstart](#quickstart)
+- [Revert to stock](#revert-to-stock)
+- [Downloads & releases](#downloads--releases)
+- [Attribution & credits](#attribution--credits)
+- [Security & Responsible Use](#security--responsible-use)
+- [License](#license)
+- [Contributing](#contributing)
+
+---
 
 ## Quick highlights
-- Target hardware: Tello / UZ801-derived WiFi SoC modding
-- Goals: Linux userspace support, modular payloads, photogrammetry-ready toolchain
+- Target hardware: Tello / UZ801-derived WiFi SoC modding  
+- Goals: Linux userspace support, modular payloads, photogrammetry-ready toolchain  
 - Keywords: OpenStick, UZ801, Tello, photogrammetry, modular-drone, embedded-linux, microdrone
 
-## Why the Ryze Tello was chosen
-We selected the Ryze Tello as the baseline platform for HandsomeTello for practical and strategic reasons:
-- Cheap, mass-produced, and accessible micro drone — widely available and low cost makes iterative experimentation and larger-scale testing feasible.
-- API is open and documented — existing command/telemetry interfaces simplify integration, automation, and community contributions.
-- Existing research and community projects — there is prior work to build upon or integrate with, accelerating development and reproducibility.
-- Classified as a toy drone in many contexts — this typically results in fewer regulatory burdens in some jurisdictions (for example, no drone ID requirements where toy classification applies). Note: regulations and classifications vary by country and can change; always verify the current rules that apply to your location (see Responsible Use below).
+## Why Ryze Tello
+- Cheap, mass-produced, and accessible — low cost enables iterative experimentation and larger-scale testing.  
+- Open, documented command/telemetry API — simplifies scripting and automation.  
+- Established community research and projects to build on — faster reproducibility.  
+- Often classified as a toy drone — fewer regulatory barriers in many jurisdictions (verify local rules before testing).
 
-## Attribution / Acknowledgements
-This project builds on community hardware and software work. In particular:
+---
 
-- Handsome mod for the UZ801
-  - Link: https://github.com/HandsomeMod
-  - Attribution: Handsome UZ801 mod — hardware guidance and modifications used for UZ801-based expansion.
+## Features & roadmap
+Planned and implemented project areas:
+- Linux userspace on UZ801 expansion modules
+- Modular payload support (camera, environmental sensors)
+- Photogrammetry capture examples and pipelines
+- Bridge/adapter patterns for MAVLink integration (planned)
+- Security hardening and isolation best-practices (planned)
 
-- Vim Vanthoog / OpenStick (OpenStick UZ801 v3.0 bundle)
-  - Link: https://wvthoog.nl/openstick/
-  - Attribution: OpenStick UZ801 resources and images used per upstream documentation.
+Want a prioritized roadmap? Open an issue labeled `roadmap` or `help wanted` and we’ll triage.
 
-Please ensure you respect the original authors' licenses and attributions. See CREDITS.md for details and links.
-
-## About "microvandalism"
-The term "microvandalism" appears in an associated white paper that documents research and scenarios explored during development. This repository documents technical work and research into small-form payloads, deployment mechanisms, and mitigation strategies; it does not endorse illegal activity. See the Responsible Use section below for important guidance.
+---
 
 ## Deferred / Not-Included Features (time & financial constraints)
-The list below describes features that were scoped and researched for HandsomeTello but were not implemented in the initial project release due to limited time and/or funding. They are documented here both to be transparent about project scope and to help potential contributors pick priority tasks.
+The following features were scoped but deferred from the initial release. Each is documented so contributors can pick them up.
 
-- vGPS / NAVSOP / Assisted Navigation (cell-tower & Wi‑Fi)
-  - What: Hybrid location/navigation using visual odometry (vGPS), NAVSOP-like sensor fusion, and cellular/Wi‑Fi assisted fixes to improve localization in GNSS-poor environments.
-  - Reason deferred: Requires additional sensor integration, datasets for tuning, and substantial algorithm development and testing resources.
+- vGPS / NAVSOP / Assisted Navigation (cell & Wi‑Fi)
+- Arduino Pro Mini via UART — low-power management, solar recharge, autonomous RTH
+- Real-time low-bandwidth video transcoding (reduce cellular data fees)
+- openipc and/or wifi-broadcast-ng camera streams
+- USB‑OTG host on UZ801 (attach SDR, LiDAR, USB sensors)
+- Rooting / reverse engineering Tello stock firmware (hardware swaps, native USB/video)
+- MAVLink bridges (Tello UDP → MAV)
+- Wi‑Fi chipset security remediation / hardening
 
-- Arduino Pro Mini via UART for low-power management, solar recharge, and autonomous return-to-home
-  - What: Use a small MCU (Arduino Pro Mini) on UART for deep-sleep control, energy-budgeted solar recharge management, and an independent RTH (return-to-home) fail-safe when radio control is lost.
-  - Reason deferred: Extra hardware, PCBs, and test rigs required for reliable power-management; also introduces hardware safety/regulatory testing overhead.
+See the issue tracker for individual tasks and suggested estimates.
 
-- Real-time low-bandwidth video transcoding (cell-network cost reduction)
-  - What: On-board lightweight transcoder to reduce uplink bitrate for cellular streaming (codec/bitrate adaptation, frame-dropping, metadata-only modes).
-  - Reason deferred: Requires optimized encoder toolchain for UZ801, real-time performance tuning, and cellular data usage testing (incurs recurring costs).
+---
 
-- openipc and/or wifi-broadcast-ng implementation
-  - What: Replace or augment stock IPC (camera/stream) with openipc or experimental broadcast modes to enable local multicast, low-latency viewing, or opportunistic data-sharing.
-  - Reason deferred: Complex reverse-engineering and compatibility testing; carries risk of destabilizing stock services unless isolated.
+## Recommended remote control software (4G links)
+For remote operation over IP/cellular tunnels we recommend:
+- TelloTerm — https://github.com/SMerrony/telloterm — lightweight UDP terminal control and telemetry
+- Tello with JS joystick — https://github.com/st-user/tello-with-js-joystick- — browser-based joystick UI
 
-- USB‑OTG with the UZ801 as USB host (modular USB add-ons: SDR, LiDAR, sensors)
-  - What: Enable UZ801 to act as USB host via OTG so users can attach low-cost USB sensors (SDR dongles, LiDAR, cameras, environmental sensors).
-  - Reason deferred: Hardware wiring, power budgeting, and driver support (and likely ROM changes) require time and multiple hardware prototypes.
+Both are third-party projects — check their repos and licenses before use.
 
-- Rooting / reverse engineering stock Tello firmware to enable hardware swaps (wi‑fi chip replacement, native USB OTG, USB video)
-  - What: Deep firmware work to unlock or replace Wi‑Fi chipset support, enable native USB host/device functionality, or route video over USB.
-  - Reason deferred: Highly time-consuming, legally and ethically sensitive in some jurisdictions, and may brick devices if done incorrectly. Requires careful responsible-disclosure practices.
+---
 
-- MAV / Micro Air Vehicle protocol integration and bridges
-  - What: Bridge Tello control into MAV (MAVLink / micro air vehicle) ecosystems so it can be integrated with autopilots, GCSs, and simulators.
-  - Reason deferred: Requires protocol-bridging middleware and test harnesses; Tello already exposes a simple UDP command interface, so a bridge is feasible but needs time to validate safe behaviors.
+## Quickstart
+1. Clone the repo:
+   git clone https://github.com/ScivizLabVienna/HandsomeTello.git
+2. Read docs/installation.md for recommended hardware and the test bench setup.
+3. Prepare an isolated test environment (bench power, USB‑serial, isolated Wi‑Fi).
+4. Consult CREDITS.md and upstream OpenStick docs before flashing or reimaging.
 
-- Low-level Wi‑Fi chip security remediation / hardening
-  - What: Fix or mitigate known Wi‑Fi chipset vulnerabilities, apply firmware patches, or add network isolation/firewalling.
-  - Reason deferred: Patching firmware and verifying fixes can be costly and requires coordination with upstream maintainers and security researchers.
+Commands
+```bash
+# clone and open
+git clone https://github.com/ScivizLabVienna/HandsomeTello.git
+cd HandsomeTello
+```
 
-If you want a prioritized roadmap, we can produce one (short/medium/long term) and an estimation of hardware/software cost per feature to support funding requests.
+---
 
-## Recommended remote control software for 4G links
-- TelloTerm — https://github.com/SMerrony/telloterm (SMerrony/telloterm) — lightweight terminal/UDP control for scripting and telemetry.
-- Tello with JS joystick — https://github.com/st-user/tello-with-js-joystick- (st-user/tello-with-js-joystick-) — browser-based joystick UI that pairs well with tethered / remote links.
+## Revert to stock
+To restore stock Wi‑Fi operation after using the UZ801:
+1. Power down Tello and disconnect external modules.
+2. Physically disconnect the UZ801’s USB power feed from the Tello (leave internal wiring intact).
+3. Power the Tello — it should advertise the stock Wi‑Fi SSID and accept connections.
 
-## Reverting to stock Tello operation
-To restore stock Wi‑Fi operation:
-1. Power down the Tello and disconnect any external modules.
-2. Physically disconnect the UZ801’s USB power line from the Tello (leave the Tello’s internal wiring intact).
-3. Power up the Tello. It should advertise its stock Wi‑Fi SSID and accept connections via the documented Tello Wi‑Fi interface.
+Caveats:
+- If the internal Tello firmware was modified, hardware removal alone may not revert to a truly stock state. Consult upstream OpenStick docs for firmware reflashing steps.
+- Hardware modifications may void warranty and can brick devices. Test on expendable units in an isolated lab.
 
-Notes and caveats:
-- Disconnecting or modifying power wiring can cause bricking or hardware damage if done incorrectly; perform in an isolated bench environment and keep a recovery plan.
-- Removing the UZ801 power feed may not revert any persistent firmware changes made to the Tello itself (if you installed modified ROMs); “reverting to stock” by removing external hardware only works when the stock Tello firmware remains intact.
-- Warranty and manufacturer support will likely be void after hardware modification.
+---
 
-## Implementation notes: control & protocols
-- Simple UDP command interface: The Tello exposes a documented, simple UDP text/command API for flight and telemetry control. This makes rapid prototyping and scripting straightforward.
-- MAV compatibility: Tello is not MAVLink-native out of the box, but community projects and bridges exist that translate the Tello UDP API to MAVLink. HandsomeTello intends to provide a stable bridge layer for integration with MAV ecosystems (deferred — see above).
+## Downloads & releases
+We include the OpenStick UZ801 v3.0 bundle as a release asset in our `v0.1` release. Upstream documentation and a detailed setup guide are at:
+- https://wvthoog.nl/openstick/
+
+When downloading the release asset, verify the SHA256 checksum included in the release notes.
+
+---
+
+## Attribution & credits
+This project builds on community work:
+- Handsome UZ801 mod — https://github.com/HandsomeMod  
+- Vim Vanthoog / OpenStick — https://wvthoog.nl/openstick/  
+
+See CREDITS.md for full attribution and recommended wording. The OpenStick upstream page contains detailed setup documentation we reference heavily.
+
+---
 
 ## Security & Responsible Use
-This project documents research into microdrone payloads and includes references to the term "microvandalism" as used in academic/white-paper contexts. Important rules:
-- This repository is intended for lawful research, academic study, responsible environmental projects, and authorized experimental testing only.
-- Do not use the instructions here to perform illegal or harmful activities. The presence of the term "microvandalism" in a white paper does not imply approval for malicious use.
-- Regulations and classifications (e.g., "toy drone") differ between jurisdictions and can change over time. Always verify local aviation rules, manufacturer terms of service, and any institutional review or ethics processes that apply before testing or deploying hardware.
-- There are public disclosures of vulnerabilities affecting the drone Wi‑Fi chipset. Avoid exposing research devices to untrusted networks, follow upstream advisories, and adopt network isolation / firewalling / patched images when available. We will not publish exploit details in this repository.
-- We recommend adding an institutional or project-level ethics statement and a short legal disclaimer in docs/ to accompany any white-paper references.
+- Report security issues by opening an issue labeled `security` in this repo (see SECURITY.md). Do not post exploit details publicly.  
+- This repository documents research that references the term “microvandalism” as used in an associated white paper. The project does not endorse illegal activity — follow institutional and legal requirements.  
+- Avoid exposing development devices to untrusted networks and follow the recommendations in SECURITY.md.
 
-## Get started
-1. Clone this repo
-2. Read docs/installation.md for supported hardware and build steps
-3. See examples/photogrammetry for an end-to-end payload + capture workflow
+---
 
-## Release / Downloads
-We include the OpenStick UZ801 v3.0 bundle as a release asset. Upstream documentation and detailed setup instructions are available at: https://wvthoog.nl/openstick/
+## License
+- Documentation, designs and media: Creative Commons Attribution-ShareAlike 4.0 International (CC BY‑SA 4.0). See LICENSE.  
+- Software and firmware: MIT License. See LICENSE.code.
 
-Please see RELEASE_NOTES.md for the planned release notes and the SHA256 checksum placeholder for the openstick-uz801-v3.0.zip release asset.
+Notes: CC BY‑SA is not ideal for executable code; we use MIT for code/firmware to encourage reuse and contributions.
 
-## Project license
-This repository uses a split-licensing approach:
-- Documentation, designs and media: Creative Commons Attribution-ShareAlike 4.0 International (CC BY‑SA 4.0). See LICENSE for details.
-- Software and firmware: MIT License. See LICENSE.code for full text.
+---
 
-Note: CC BY‑SA is not generally recommended for executable code; if you prefer a single license, update LICENSE and LICENSE.code accordingly.
+## Contributing
+See CONTRIBUTING.md and CODE_OF_CONDUCT.md. When contributing:
+- Open an issue for large changes before submitting a PR.
+- Include safety/ethics notes for features touching deployment or payloads.
+- Specify the intended license for new code if you deviate from MIT.
 
-## Credits / Contributors
-See CREDITS.md for upstream authors, links to original projects (HandsomeMod, OpenStick), and suggested contributor attribution format.
-
-## Assets / Logos
-Place the following images in the `assets/` directory (placeholders are included):
-- `assets/cc-by-sa-88x31.png` — Creative Commons BY-SA logo (88×31 px)
-- `assets/scivizlab-vienna-logo-120x40.png` — ScivizLab Vienna logo (~120×40 px)
-
-At the bottom of repository pages and the README we display both logos:
+---
 
 <p align="center">
   <a href="https://creativecommons.org/licenses/by-sa/4.0/">
-    <img src="assets/cc-by-sa-88x31.png" alt="CC BY-SA 4.0" />
+    <img src="assets/cc-by-sa-88x31.svg" alt="CC BY-SA 4.0" width="88" height="31" />
   </a>
   &nbsp;&nbsp;
-  <img src="assets/scivizlab-vienna-logo-120x40.png" alt="ScivizLab Vienna" />
+  <img src="assets/scivizlab-vienna-logo-120x40.svg" alt="ScivizLab Vienna" width="120" height="40" />
 </p>
-
-## Contributing
-See CONTRIBUTING.md and CODE_OF_CONDUCT.md for how to contribute. When opening PRs related to deferred features, please:
-- Add a short feasibility note and a rough cost estimate.
-- Include safety/ethics considerations and test plans.
-- If code or firmware is included, propose a compatible software license for those components (or confirm they remain under MIT).
-
-## License
-Documentation/designs: CC BY‑SA 4.0 — see LICENSE
-Code/firmware: MIT — see LICENSE.code
