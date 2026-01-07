@@ -86,7 +86,7 @@ Both are third-party projects — check their repos and licenses before use.
 1. Clone the repo:
    git clone https://github.com/ScivizLabVienna/HandsomeTello.git
 2. Follow the instructions on  [https://wvthoog.nl/openstick/](https://wvthoog.nl/openstick/)
-3. Follow the instructions on [https://instructables.com](https://www.instructables.com/HandsomeTello/)
+3. Follow the instructions on [https://instructables.com/HandsomeTello/](https://www.instructables.com/HandsomeTello/)
 4. Fly
 
 Commands
