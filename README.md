@@ -101,11 +101,15 @@ For remote operation over IP/cellular tunnels we recommend:
 Both are third-party projects — check their repos and licenses before use.
 
 ---
+
+## Future directions
+
 As of yet there is no further development planned on this project therefore we encourage you to fork and modify and share to your hearts content.
 
-Future directions
 Flapping wing drones have become affordable, sophisticated and widespread enough to be used as a viable artistic and research platform.
+
 In terms of efficiency, noise pollution, aesthetics and non intrusiveness, flapping wing drones far outmatch propeller driven micro air vehicles. Especially in an urban environment. 
 One of the highly recommended platforms (still in pre-launch at the time of this writing) would be the swift from the french company bionic bird.
-https://www.kickstarter.com/projects/274008848/the-swift-natural-flight-reinvented
 
+https://www.kickstarter.com/projects/274008848/the-swift-natural-flight-reinvented
+---
