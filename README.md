@@ -60,12 +60,9 @@ Want a prioritized roadmap? Open an issue labeled `roadmap` or `help wanted` and
 ## Deferred / Not-Included Features (time & financial constraints)
 The following features were scoped but deferred from the initial release. Each is documented so contributors can pick them up.
 
-- vGPS / NAVSOP / Assisted Navigation (cell & Wi‑Fi)
-  [https://www.wired.com/story/finding-your-way-without-gps/](https://web.archive.org/web/20250718205549/https://www.wired.com/story/finding-your-way-without-gps/)
+- vGPS / NAVSOP / Assisted Navigation (cell & Wi‑Fi)[https://www.wired.com/story/finding-your-way-without-gps/](https://web.archive.org/web/20250718205549/https://www.wired.com/story/finding-your-way-without-gps/)
 
-- Arduino Pro Mini via UART — low-power deep sleep, solar recharge, autonomous RTH
-  https://the-diy-life.com/making-an-ultra-low-power-arduino-pro/
-  https://shop.halocell.energy/products/halocell-ambient-module-60x23_4
+- Arduino Pro Mini via UART — low-power deep sleep, solar recharge, autonomous RTH https://the-diy-life.com/making-an-ultra-low-power-arduino-pro/ https://shop.halocell.energy/products/halocell-ambient-module-60x23_4
 
 - Real-time low-bandwidth video transcoding (reduce cellular data fees)
   https://heavydeck.net/post/64k-is-enough-for-video/
