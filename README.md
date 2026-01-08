@@ -18,12 +18,12 @@ HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone: r
 ---
 
 ## Table of contents
+- [Quickstart](#quickstart)
 - [Quick highlights](#quick-highlights)
 - [Why Ryze Tello](#why-ryze-tello)
 - [Features & roadmap](#features--roadmap)
 - [Deferred / Not-included features](#deferred--not-included-features)
 - [Recommended remote control software (4G)](#recommended-remote-control-software-4g)
-- [Quickstart](#quickstart)
 - [Revert to stock](#revert-to-stock)
 - [Downloads & releases](#downloads--releases)
 - [Attribution & credits](#attribution--credits)
@@ -32,7 +32,13 @@ HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone: r
 - [Contributing](#contributing)
 
 ---
-
+## Quickstart
+1. Clone the repo:
+   git clone https://github.com/ScivizLabVienna/HandsomeTello.git
+2. Follow the instructions on  [https://wvthoog.nl/openstick/](https://wvthoog.nl/openstick/)
+3. Follow the instructions on [https://instructables.com/HandsomeTello/](https://www.instructables.com/HandsomeTello/)
+4. Fly
+---
 ## Quick highlights
 - Target hardware: Tello / UZ801-derived WiFi dongle
 - Goals: Linux userspace support, modular payloads, photogrammetry-ready toolchain  
@@ -96,16 +102,4 @@ Both are third-party projects — check their repos and licenses before use.
 
 ---
 
-## Quickstart
-1. Clone the repo:
-   git clone https://github.com/ScivizLabVienna/HandsomeTello.git
-2. Follow the instructions on  [https://wvthoog.nl/openstick/](https://wvthoog.nl/openstick/)
-3. Follow the instructions on [https://instructables.com/HandsomeTello/](https://www.instructables.com/HandsomeTello/)
-4. Fly
-
-Commands
-```bash
-# clone and open
-git clone https://github.com/ScivizLabVienna/HandsomeTello.git
-cd HandsomeTello
 
