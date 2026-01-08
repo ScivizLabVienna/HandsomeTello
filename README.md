@@ -60,14 +60,31 @@ Want a prioritized roadmap? Open an issue labeled `roadmap` or `help wanted` and
 ## Deferred / Not-Included Features (time & financial constraints)
 The following features were scoped but deferred from the initial release. Each is documented so contributors can pick them up.
 
-- vGPS / NAVSOP / Assisted Navigation (cell & Wi‑Fi) [https://www.wired.com/story/finding-your-way-without-gps/](https://web.archive.org/web/20250718205549/https://www.wired.com/story/finding-your-way-without-gps/)
-- Arduino Pro Mini via UART — low-power deep sleep, solar recharge, autonomous RTH https://the-diy-life.com/making-an-ultra-low-power-arduino-pro/
-- Real-time low-bandwidth video transcoding (reduce cellular data fees) https://heavydeck.net/post/64k-is-enough-for-video/
-- openipc and/or wifi-broadcast-ng (needs firmware modification of WIFI SoC) https://github.com/MrJabu/RyzeTelloFirmware https://github.com/OpenIPC https://github.com/OpenIPC/wfb-ng-openwrt
-- USB‑OTG host on UZ801 (attach SDR, LiDAR, USB sensors) https://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)
-- Rooting / reverse engineering Tello stock firmware (hardware swaps, native USB/video) https://github.com/MrJabu/RyzeTelloFirmware
-- MAVLink bridges (Tello UDP → MAV) https://mavlink.io/
-- Wi‑Fi chipset security remediation / hardening https://www.cve.org/CVERecord?id=CVE-2019-6496
+- vGPS / NAVSOP / Assisted Navigation (cell & Wi‑Fi)
+  [https://www.wired.com/story/finding-your-way-without-gps/](https://web.archive.org/web/20250718205549/https://www.wired.com/story/finding-your-way-without-gps/)
+
+- Arduino Pro Mini via UART — low-power deep sleep, solar recharge, autonomous RTH
+  https://the-diy-life.com/making-an-ultra-low-power-arduino-pro/
+  https://shop.halocell.energy/products/halocell-ambient-module-60x23_4
+
+- Real-time low-bandwidth video transcoding (reduce cellular data fees)
+  https://heavydeck.net/post/64k-is-enough-for-video/
+
+- openipc and/or wifi-broadcast-ng (needs firmware modification of WIFI SoC)
+  https://github.com/MrJabu/RyzeTelloFirmware
+  https://github.com/OpenIPC https://github.com/OpenIPC/wfb-ng-openwrt
+
+- USB‑OTG host on UZ801 (attach SDR, LiDAR, USB sensors)
+  https://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)
+
+- Rooting / reverse engineering Tello stock firmware (hardware swaps, native USB/video)
+  https://github.com/MrJabu/RyzeTelloFirmware
+
+- MAVLink bridges (Tello UDP → MAV)
+  https://mavlink.io/
+
+- Wi‑Fi chipset security remediation / hardening
+  https://www.cve.org/CVERecord?id=CVE-2019-6496
 
 See the issue tracker for individual tasks and suggested estimates.
 
