@@ -70,7 +70,7 @@ The following features were scoped but deferred from the initial release. Each i
 
 - Arduino Pro Mini via UART — low-power deep sleep, solar recharge, autonomous RTH https://the-diy-life.com/making-an-ultra-low-power-arduino-pro/ https://shop.halocell.energy/products/halocell-ambient-module-60x23_4
 
--T-mobile Sat/Starlink or similar provider direct to cell satellite link (4G direct to cell data not available until mid 2026)
+- T-mobile Sat/Starlink or similar provider direct to cell satellite link (4G direct to cell data not available until mid 2026)
  https://www.t-mobile.com/coverage/satellite-phone-service
  
 - Real-time low-bandwidth video transcoding (reduce cellular data fees)
