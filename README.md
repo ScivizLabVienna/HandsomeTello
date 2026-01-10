@@ -23,7 +23,7 @@ HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone us
 - [Why Ryze Tello](#why-ryze-tello)
 - [Features & roadmap](#features)
 - [Deferred / Not-included features](#deferred-and-not-included-features)
-- [Recommended remote control software (4G)](#recommended-remote-control-software-4g)
+- [Recommended remote control software (4G)](#recommended-remote-control-software)
 - [Attribution & credits](#attribution--credits)
 - [Security & Responsible Use](#security--responsible-use)
 - [License](#license)
@@ -94,7 +94,7 @@ See the issue tracker for individual tasks and suggested estimates.
 
 ---
 
-## Recommended remote control software (4G links)
+## Recommended remote control software
 For remote operation over IP/cellular tunnels we recommend:
 - TelloTerm — https://github.com/SMerrony/telloterm — lightweight UDP terminal control and telemetry
 - Tello with JS joystick — https://github.com/st-user/tello-with-js-joystick- — browser-based joystick UI
