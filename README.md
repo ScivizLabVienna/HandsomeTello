@@ -24,7 +24,6 @@ HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone us
 - [Features & roadmap](#features--roadmap)
 - [Deferred / Not-included features](#deferred--not-included-features)
 - [Recommended remote control software (4G)](#recommended-remote-control-software-4g)
-- [Revert to stock](#revert-to-stock)
 - [Downloads & releases](#downloads--releases)
 - [Attribution & credits](#attribution--credits)
 - [Security & Responsible Use](#security--responsible-use)
