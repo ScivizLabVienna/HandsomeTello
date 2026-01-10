@@ -22,7 +22,7 @@ HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone us
 - [Quick highlights](#quick-highlights)
 - [Why Ryze Tello](#why-ryze-tello)
 - [Features & roadmap](#features)
-- [Deferred / Not-included features](#deferred--not-included-features)
+- [Deferred / Not-included features](#deferred-and-not-included-features)
 - [Recommended remote control software (4G)](#recommended-remote-control-software-4g)
 - [Attribution & credits](#attribution--credits)
 - [Security & Responsible Use](#security--responsible-use)
@@ -61,8 +61,8 @@ Want a prioritized roadmap? Open an issue labeled `roadmap` or `help wanted` and
 
 ---
 
-## Deferred / Not-Included Features (time & financial constraints)
-The following features were scoped but deferred from the initial release. Each is documented so contributors can pick them up.
+## Deferred and Not-Included Features
+The following features were scoped but deferred from the initial release due to financial and time constraints. Each is documented so contributors can pick them up.
 
 - vGPS / NAVSOP / Assisted Navigation (cell & Wi‑Fi)[https://www.wired.com/story/finding-your-way-without-gps/](https://web.archive.org/web/20250718205549/https://www.wired.com/story/finding-your-way-without-gps/)
 
