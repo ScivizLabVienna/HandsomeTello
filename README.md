@@ -4,7 +4,7 @@
 
 This drone was developed as part of the ongoing research project [KanalOpal](https://www.scivizlab.com/kanal-opal) for the Science Visualization Lab Vienna, University of Applied Arts.
 
-[![Release](https://img.shields.io/github/release/ScivizLabVienna/HandsomeTello/all.svg)?label=release&color=brightgreen)](https://github.com/ScivizLabVienna/HandsomeTello/releases/)
+[![Release](https://img.shields.io/github/release/ScivizLabVienna/HandsomeTello/all.svg)](https://github.com/ScivizLabVienna/HandsomeTello/releases/)
 [![Docs license](https://img.shields.io/badge/docs-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 [![Code license](https://img.shields.io/badge/code-MIT-green)](LICENSE.code)
 [![Issues](https://img.shields.io/github/issues/ScivizLabVienna/HandsomeTello)](https://github.com/ScivizLabVienna/HandsomeTello/issues)
