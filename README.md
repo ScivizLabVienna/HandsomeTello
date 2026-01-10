@@ -13,7 +13,7 @@ This drone was developed as part of the ongoing research project [KanalOpal](htt
 
 # HandsomeTello — The open micro drone
 
-HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone: run lightweight Linux userspace, attach research payloads, and prototype workflows for photogrammetry, environmental sensing, and robotics research.
+HandsomeTello turns the DJI Tello into an open, easily modifiable micro drone using the Handsomemod Zhihe series 4G dongle: run lightweight Linux userspace, attach research payloads, and prototype workflows for photogrammetry, environmental sensing, and robotics research.
 
 ---
 
